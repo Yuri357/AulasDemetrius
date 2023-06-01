@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+background-color: black;
+color: gray;
+
+}
+
+a:hover {
+ color: blue;
+}
+
+input {
+    color: black;
+}
