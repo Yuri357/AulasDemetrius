@@ -26,4 +26,3 @@ $query=mysqli_query($conexao, $insert);
 </body>
 </html>
 
-

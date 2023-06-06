@@ -8,12 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
+    <div class="Cad">
 <h1>Cadastro</h1>
 <form id = "cadastro" action = "cadastrar.php" method = "POST">   
 nome: <input type = "text" name = "nome" required><br>
 login: <input type = "text" name = "login" required><br>
 senha: <input type = "password" name = "senha" required><br>
        <input type = "submit" name = "Cadastrar" value = "cadastrar" required><br><br>
-
+</center>
+    </div>
 </body>
 </html>

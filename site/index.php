@@ -11,6 +11,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="inicio">
 <center>
 olá,
 <?php 
@@ -25,6 +26,6 @@ if(isset($_SESSION['nome'])== null){
 <a href="sair.php">Sair</a>
 <?php } ?>
 </center>
-
+</div>
 </body>
 </html>
