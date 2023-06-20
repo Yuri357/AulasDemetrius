@@ -1,9 +1,17 @@
+<style>
+    body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan, black);
+    }
+</style>
 <?php
 
 include ("conexao.php");
 $nome = isset ($_POST['nome'])?$_POST['nome']:'';
 $login = isset ($_POST['login'])?$_POST['login']:'';
 $senha = isset ($_POST['senha'])?$_POST['senha']:'';
+$hashSenha = password_hash($senha, PASSWORD_DEFAULT);
+
 
 $insert = "insert into login (nome, login, senha)
 values

@@ -1,31 +1,46 @@
-<?php
-    session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" type = "text/css" href = "estilo.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="inicio">
-<center>
-olá,
 <?php 
-if(isset($_SESSION['nome'])== null){
+session_start();
 ?>
-  visitante<br>
-  <a href="cadastro.php">Cadastrar</a><br>
-  <a href ="login.php">login</a>
-<?php } else {
-    echo $_SESSION['nome'];?>
-    <br>
-<a href="sair.php">Sair</a>
-<?php } ?>
+<style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, cyan, black);
+    text-align: center;
+    color: white;
+  }
+  center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+  }
+</style>
+<html>
+<body>
+<center>
+    olá,<?php
+    if(isset($_SESSION['nome'])==null){
+    ?> visitante<br>
+    <a href="cadastro.php">Cadastre-se</a><br>
+    <a href="login.php">Login</a>
+
+    <?php } else {
+        echo $_SESSION['nome'];?>
+        <br>
+        <a href="sair.php">Sair</a><br>
+        <a href="alterarsenha.php">Alterar Senha</a><br>
+        <a href="lista.php">Lista de Usuários</a><br>
+         <?php } ?>
 </center>
-</div>
 </body>
+
+
+
 </html>

@@ -1,11 +1,13 @@
 <?php
-include('conexao.php');
+    include('conexao.php');
 
 $login = isset ($_POST['login'])?$_POST['login']:'';
 $senha = isset ($_POST['senha'])?$_POST['senha']:'';
 $select ="select nome, login, senha from login where login = '$login' and senha ='$senha'";
 $query = mysqli_query($conexao,$select);
 $dados = mysqli_fetch_row($query);
+$hashSenha = password_hash($senha, PASSWORD_DEFAULT);
+
 
 
 if ($login == $dados[1] && $senha == $dados[2]){ 
